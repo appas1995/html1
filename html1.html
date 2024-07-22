@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا</title>
+    <link rel="stylesheet" href="css1.css">
+</head>
+<body>
+    <header>
+        <h1>خدماتنا</h1>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>إضافة خدمة جديدة</h2>
+            <form id="service-form">
+                <input type="text" id="service-title" placeholder="عنوان الخدمة" required>
+                <input type="text" id="service-image" placeholder="رابط الصورة" required>
+                <textarea id="service-description" placeholder="تفاصيل الخدمة" required></textarea>
+                <button type="submit">إضافة الخدمة</button>
+            </form>
+        </div>
+        <div class="services-container" id="services-container">
+            <!-- الخدمات ستضاف هنا -->
+        </div>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="service-details"></div>
+        </div>
+    </div>
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeEditModal()">&times;</span>
+            <h2>تعديل الخدمة</h2>
+            <form id="edit-service-form">
+                <input type="text" id="edit-service-title" required>
+                <input type="text" id="edit-service-image" required>
+                <textarea id="edit-service-description" required></textarea>
+                <button type="submit">حفظ التغييرات</button>
+            </form>
+        </div>
+    </div>
+    <script src="js1.js"></script>
+</body>
+</html>
